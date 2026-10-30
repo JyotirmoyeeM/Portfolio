@@ -1,136 +1,477 @@
+Index.html
+
+
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Jyotirmoyee Mitra PORTFOLIO</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <style>
+          * {
+              margin: 0;
+              padding: 0;
+          }
+          body {
+              background-color: rgb(35, 3, 43);
+              color: rgb(255, 255, 255);
+              font-family: 'Poppins', sans-serif;
+          }
+          nav {
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              height: 75px;
+              background-color: rgb(50, 4, 61);
+          }
+          nav ul {
+              display: flex;
+              justify-content: space-around;
+          }
+          nav ul li {
+              list-style: none;
+              margin: 20px;
+          }
+          nav ul li:last-child {
+              margin-right: 0;
+          }
+          nav ul li a {
+              text-decoration: none;
+              color: rgb(255, 255, 255);
+              transition: color 0.3s ease;
+          }
+          nav ul li a:hover {
+              color: rgba(221, 61, 61, 0.692);
+              font-size: 1.4rem;
+          }
+          .left {
+              font-size: 1.20rem;
+              margin: 0;
+              padding: 0;
+              text-transform: uppercase;
+          }
+          .left a {
+              text-decoration: none;
+              color: rgb(255, 255, 255);
+              transition: color 0.3s ease;
+          }
+          .left span {
+              display: inline-flex;
+              color: rgba(221, 61, 61, 0.692);
+          }
+          .left span:nth-child(even) {
+              overflow: hidden;
+              transition: ease-in-out 0.5s;
+              color: rgb(255, 255, 255);
+              letter-spacing: -1rem;
+          }
+          .left:hover span:nth-child(even) {
+              letter-spacing: 0;
+          }
+          .firstSection {
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              margin: 55px;
+          }
+          .leftSection {
+              width: 50%;
+              font-size: 2rem;
+          }
+          .rightSection {
+              width: 40%;
+          }
+          .rightSection img {
+              width: 100%;
+              border-radius: 10px;
+          }
+          .Name {
+              color: rgba(221, 61, 61, 0.692);
+              font-weight: bold;
+          }
+          #element {
+              color: rgba(221, 61, 61, 0.692);
+          }
+      </style>
+  </head>
+  <body>
+      <header>
+          <nav>
+              <div class="left">
+                  <a href="Jyotirmoyee_Mitra_2024.pdf" target="_blank"><span>J</span><span>yotirmoyee</span> Mitra's Portfolio</a>
+              </div>
+              <div class="right">
+                  <ul>
+                      <li><a href="#home">Home</a></li>
+                      <li><a href="about.html">About</a></li>
+                      <li><a href="services.html">Services</a></li>
+                      <li><a href="project.html">Projects</a></li>
+                      <li><a href="contact.html">Contact Me</a></li>
+                  </ul>
+              </div>
+          </nav>
+      </header>
+
+      <main>
+          <section id="home" class="firstSection">
+              <div class="leftSection">
+                  <h1>Hey, I'm <span class="Name">Jyotirmoyee.</span></h1>
+                  <p>A passionate <span id="element"></span>. <span>Let me charm your screen and steal a byte of attention! Welcome to my digital den!</span></p>
+              </div>
+              <div class="rightSection">
+                  <img src="bg.jpg" alt="Profile Image">
+              </div>
+          </section>
+      </main>
+
+      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+      <script>
+          var typed = new Typed('#element', {
+              strings: ['Web Developer', 'AWS DevOps Engineer', 'UX Designer', 'Cloud Engineer'],
+              typeSpeed: 120,
+              loop: true
+          });
+      </script>
+  </body>
+  </html> ---can you rewrite it in better way
+
+  Thought for 5s
+
+Here's a cleaner, more modern rewrite with CSS variables, better responsiveness, and subtle animations:
+
+⏺ Write(/Users/jymitra/Desktop/middleware/cortexaibe-mw/portfolio/index.html)
+
+Wrote 330 lines to /Users/jymitra/Desktop/middleware/cortexaibe-mw/portfolio/index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jyotirmoyee Mitra PORTFOLIO</title>
+    <title>Jyotirmoyee Mitra | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
+        :root {
+            --bg-dark: #1a0220;
+            --bg-nav: #280330;
+            --bg-card: #220229;
+            --accent: #e03c3c;
+            --accent-muted: rgba(221, 61, 61, 0.75);
+            --text: #ffffff;
+            --text-muted: rgba(255, 255, 255, 0.65);
+            --transition: 0.3s ease;
+        }
+
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background-color: rgb(35, 3, 43);
-            color: rgb(255, 255, 255);
+            background-color: var(--bg-dark);
+            color: var(--text);
             font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
         }
+
+        /* ── Nav ── */
         nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
-            height: 75px;
-            background-color: rgb(50, 4, 61);
+            padding: 0 5%;
+            height: 72px;
+            background-color: var(--bg-nav);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
         }
+
+        .nav-logo {
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--text);
+            letter-spacing: 0.04em;
+            display: flex;
+            align-items: center;
+            gap: 0.1em;
+            transition: opacity var(--transition);
+        }
+
+        .nav-logo:hover {
+            opacity: 0.85;
+        }
+
+        .nav-logo .accent {
+            color: var(--accent-muted);
+        }
+
         nav ul {
             display: flex;
-            justify-content: space-around;
-        }
-        nav ul li {
+            gap: 2rem;
             list-style: none;
-            margin: 20px;
         }
-        nav ul li:last-child {
-            margin-right: 0;
-        }
-        nav ul li a {
+
+        nav ul a {
             text-decoration: none;
-            color: rgb(255, 255, 255);
-            transition: color 0.3s ease;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            position: relative;
+            transition: color var(--transition);
         }
-        nav ul li a:hover {
-            color: rgba(221, 61, 61, 0.692);
-            font-size: 1.4rem;
+
+        nav ul a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width var(--transition);
+            border-radius: 2px;
         }
-        .left {
-            font-size: 1.20rem;
-            margin: 0;
-            padding: 0;
-            text-transform: uppercase;
+
+        nav ul a:hover {
+            color: var(--text);
         }
-        .left a {
-            text-decoration: none;
-            color: rgb(255, 255, 255);
-            transition: color 0.3s ease;
-        }
-        .left span {
-            display: inline-flex;
-            color: rgba(221, 61, 61, 0.692);
-        }
-        .left span:nth-child(even) {
-            overflow: hidden;
-            transition: ease-in-out 0.5s;
-            color: rgb(255, 255, 255);
-            letter-spacing: -1rem;
-        }
-        .left:hover span:nth-child(even) {
-            letter-spacing: 0;
-        }
-        .firstSection {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 55px;
-        }
-        .leftSection {
-            width: 50%;
-            font-size: 2rem;
-        }
-        .rightSection {
-            width: 40%;
-        }
-        .rightSection img {
+
+        nav ul a:hover::after {
             width: 100%;
-            border-radius: 10px;
         }
-        .Name {
-            color: rgba(221, 61, 61, 0.692);
-            font-weight: bold;
+
+        /* ── Hero ── */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 3rem;
+            padding: 6rem 8%;
+            min-height: calc(100vh - 72px);
         }
-        #element {
-            color: rgba(221, 61, 61, 0.692);
+
+        .hero-text {
+            flex: 1;
+            max-width: 560px;
+        }
+
+        .hero-text .greeting {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero-text h1 .name {
+            color: var(--accent-muted);
+            display: block;
+        }
+
+        .hero-text .role-line {
+            font-size: clamp(1rem, 2.2vw, 1.25rem);
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+        }
+
+        #typed-role {
+            color: var(--accent-muted);
+            font-weight: 600;
+        }
+
+        .hero-text .tagline {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            max-width: 420px;
+        }
+
+        .hero-actions {
+            margin-top: 2.2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.65rem 1.6rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: transform var(--transition), box-shadow var(--transition), opacity var(--transition);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 4px 18px rgba(224, 60, 60, 0.35);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 6px 24px rgba(224, 60, 60, 0.5);
+        }
+
+        .btn-outline {
+            border: 1.5px solid rgba(255, 255, 255, 0.25);
+            color: var(--text);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-muted);
+            color: var(--accent-muted);
+        }
+
+        /* ── Hero Image ── */
+        .hero-image {
+            flex-shrink: 0;
+            width: min(380px, 40vw);
+        }
+
+        .image-wrapper {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .image-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            border: 1.5px solid rgba(221, 61, 61, 0.25);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            display: block;
+            border-radius: 16px;
+            filter: brightness(0.92);
+            transition: filter var(--transition);
+        }
+
+        .image-wrapper:hover img {
+            filter: brightness(1);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 6%;
+            }
+
+            nav ul {
+                gap: 1.2rem;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                padding: 3.5rem 6% 4rem;
+                text-align: center;
+                min-height: unset;
+            }
+
+            .hero-image {
+                width: min(260px, 70vw);
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .hero-text .tagline {
+                margin-inline: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
+
     <header>
         <nav>
-            <div class="left">
-                <a href="Jyotirmoyee_Mitra_2024.pdf" target="_blank"><span>J</span><span>yotirmoyee</span> Mitra's Portfolio</a>
-            </div>
-            <div class="right">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="project.html">Projects</a></li>
-                    <li><a href="contact.html">Contact Me</a></li>
-                </ul>
-            </div>
+            <a href="Jyotirmoyee_Mitra_2024.pdf" target="_blank" class="nav-logo">
+                <span class="accent">J</span>yotirmoyee Mitra
+            </a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="firstSection">
-            <div class="leftSection">
-                <h1>Hey, I'm <span class="Name">Jyotirmoyee.</span></h1>
-                <p>A passionate <span id="element"></span>. <span>Let me charm your screen and steal a byte of attention! Welcome to my digital den!</span></p>
+        <section id="home" class="hero">
+            <div class="hero-text">
+                <p class="greeting">Welcome to my portfolio</p>
+                <h1>
+                    Hey, I'm
+                    <span class="name">Jyotirmoyee.</span>
+                </h1>
+                <p class="role-line">A passionate <span id="typed-role"></span></p>
+                <p class="tagline">Let me charm your screen and steal a byte of attention. Welcome to my digital den.</p>
+                <div class="hero-actions">
+                    <a href="project.html" class="btn btn-primary">View Projects</a>
+                    <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+                </div>
             </div>
-            <div class="rightSection">
-                <img src="bg.jpg" alt="Profile Image">
+
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="bg.jpg" alt="Jyotirmoyee Mitra">
+                </div>
             </div>
         </section>
     </main>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
-        var typed = new Typed('#element', {
+        new Typed('#typed-role', {
             strings: ['Web Developer', 'AWS DevOps Engineer', 'UX Designer', 'Cloud Engineer'],
-            typeSpeed: 120,
-            loop: true
+            typeSpeed: 90,
+            backSpeed: 50,
+            backDelay: 1800,
+            loop: true,
         });
     </script>
 </body>
