@@ -2,108 +2,331 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Jyotirmoyee Mitra PORTFOLIO</title>
+    <title>About | Jyotirmoyee Mitra</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-dark: #1a0220;
+            --bg-nav: #280330;
+            --bg-card: #220229;
+            --accent: #e03c3c;
+            --accent-muted: rgba(221, 61, 61, 0.75);
+            --text: #ffffff;
+            --text-muted: rgba(255, 255, 255, 0.65);
+            --transition: 0.3s ease;
+        }
 
-        * {
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-body{
-    background-color: rgb(35, 3, 43);
-    color: rgb(255, 255, 255);
-    font-family: 'Poppins', sans-serif;
-}
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 75px;
-    background-color: rgb(50, 4, 61);
-}
-nav ul{
-    display: flex;
-    justify-content: :space-around;
-}
-nav ul li {
-    list-style: none;
-    margin: 20px;
-}
-nav ul li:last-child {
-    margin-right: 0; 
-}
-nav ul li a{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    transition: color 0.3s ease;
-}
-nav ul li a:hover{
-    
-    color: rgba(221, 61, 61, 0.692);
-    font-size: 1.4rem;
-}
-.left{
-    font-size: 1.20rem;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-}
-.left span{
-    display: inline-flex;
-    color: rgba(221, 61, 61, 0.692);
 
-}
-.left span:nth-child(even){
-    overflow: hidden;
-    transition: ease-in-out 0.5s;
-    color:rgb(255, 255, 255);
-    letter-spacing: -1rem;
-}
-.left:hover span:nth-child(even){
-    letter-spacing: 0;
-}
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+        }
+
+        /* ── Nav ── */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            height: 72px;
+            background-color: var(--bg-nav);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .nav-logo {
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--text);
+            letter-spacing: 0.04em;
+            transition: opacity var(--transition);
+        }
+
+        .nav-logo:hover {
+            opacity: 0.85;
+        }
+
+        .nav-logo .accent {
+            color: var(--accent-muted);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            position: relative;
+            transition: color var(--transition);
+        }
+
+        nav ul a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width var(--transition);
+            border-radius: 2px;
+        }
+
+        nav ul a:hover,
+        nav ul a.active {
+            color: var(--text);
+        }
+
+        nav ul a:hover::after,
+        nav ul a.active::after {
+            width: 100%;
+        }
+
+        /* ── About Section ── */
+        .about {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 4rem;
+            padding: 6rem 8%;
+            min-height: calc(100vh - 72px);
+        }
+
+        .about-text {
+            flex: 1;
+            max-width: 540px;
+        }
+
+        .about-text .label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--accent-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        .about-text h1 {
+            font-size: clamp(2rem, 4.5vw, 3rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.6rem;
+        }
+
+        .about-text p {
+            font-size: 0.98rem;
+            color: var(--text-muted);
+            line-height: 1.85;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* Skills / tags */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 2rem;
+        }
+
+        .tag {
+            padding: 0.35rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1.5px solid rgba(221, 61, 61, 0.35);
+            color: var(--text-muted);
+            transition: border-color var(--transition), color var(--transition);
+        }
+
+        .tag:hover {
+            border-color: var(--accent-muted);
+            color: var(--text);
+        }
+
+        .about-actions {
+            margin-top: 2.2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.65rem 1.6rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 4px 18px rgba(224, 60, 60, 0.35);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 6px 24px rgba(224, 60, 60, 0.5);
+        }
+
+        .btn-outline {
+            border: 1.5px solid rgba(255, 255, 255, 0.25);
+            color: var(--text);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-muted);
+            color: var(--accent-muted);
+        }
+
+        /* ── About Image ── */
+        .about-image {
+            flex-shrink: 0;
+            width: min(380px, 40vw);
+        }
+
+        .image-wrapper {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .image-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            border: 1.5px solid rgba(221, 61, 61, 0.25);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            display: block;
+            border-radius: 16px;
+            filter: brightness(0.92);
+            transition: filter var(--transition);
+        }
+
+        .image-wrapper:hover img {
+            filter: brightness(1);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 6%;
+            }
+
+            nav ul {
+                gap: 1.2rem;
+            }
+
+            .about {
+                flex-direction: column-reverse;
+                padding: 3.5rem 6% 4rem;
+                text-align: center;
+                min-height: unset;
+            }
+
+            .about-image {
+                width: min(260px, 70vw);
+            }
+
+            .about-actions,
+            .tags {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
+
     <header>
         <nav>
-            <div class="left">
-                <a href="Jyotirmoyee_Mitra_2024.pdf" target="_blank"><span>J</span><span>yotirmoyee</span> Mitra's Portfolio</a>
-            </div>
-            <div class="right">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="/">Projects</a></li>                   
-                    <li><a href="contact.html">Contact Me</a></li>
-    
-                
-                </ul>
-            </div>
+            <a href="Jyotirmoyee_Mitra_2024.pdf" target="_blank" class="nav-logo">
+                <span class="accent">J</span>yotirmoyee Mitra
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <section id="about" class="firstSection">
-            <div class="leftSection">
+        <section id="about" class="about">
+            <div class="about-text">
+                <p class="label">Get to know me</p>
                 <h1>About Me</h1>
-                <p>I'm a passionate Web Developer and AWS DevOps Engineer with a love for coding and design.</p>
-                <p>When I'm not coding, you'll find me exploring new technologies or painting.</p>
+                <p>I'm a passionate Web Developer and AWS DevOps Engineer with a love for building things that live on the internet — clean, fast, and purposeful.</p>
+                <p>When I'm not coding, you'll find me exploring new technologies, tinkering with cloud infrastructure, or picking up a paintbrush.</p>
+
+                <div class="tags">
+                    <span class="tag">Web Development</span>
+                    <span class="tag">AWS DevOps</span>
+                    <span class="tag">UX Design</span>
+                    <span class="tag">Cloud Engineering</span>
+                    <span class="tag">CI/CD</span>
+                </div>
+
+                <div class="about-actions">
+                    <a href="Jyotirmoyee_Mitra_2024.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
+                    <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+                </div>
             </div>
-            <div class="rightSection">
-                <img src="about.jpg" alt="About Me">
+
+            <div class="about-image">
+                <div class="image-wrapper">
+                    <img src="about.jpg" alt="Jyotirmoyee Mitra">
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <!-- Footer section (if applicable) -->
-    </footer>
 </body>
 </html>
