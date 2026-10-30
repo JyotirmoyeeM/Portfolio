@@ -2,114 +2,538 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Jyotirmoyee Mitra PORTFOLIO</title>
+    <title>Services | Jyotirmoyee Mitra</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-dark: #1a0220;
+            --bg-nav: #280330;
+            --bg-card: #220229;
+            --accent: #e03c3c;
+            --accent-muted: rgba(221, 61, 61, 0.75);
+            --text: #ffffff;
+            --text-muted: rgba(255, 255, 255, 0.65);
+            --border: rgba(255, 255, 255, 0.08);
+            --transition: 0.3s ease;
+        }
 
-        * {
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-body{
-    background-color: rgb(35, 3, 43);
-    color: rgb(255, 255, 255);
-    font-family: 'Poppins', sans-serif;
-}
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 75px;
-    background-color: rgb(50, 4, 61);
-}
-nav ul{
-    display: flex;
-    justify-content: :space-around;
-}
-nav ul li {
-    list-style: none;
-    margin: 20px;
-}
-nav ul li:last-child {
-    margin-right: 0; 
-}
-nav ul li a{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    transition: color 0.3s ease;
-}
-nav ul li a:hover{
-    
-    color: rgba(221, 61, 61, 0.692);
-    font-size: 1.4rem;
-}
-.left{
-    font-size: 1.20rem;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-}
-.left a{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    transition: color 0.3s ease; 
-}
-.left span{
-    display: inline-flex;
-    color: rgba(221, 61, 61, 0.692);
 
-}
-.left span:nth-child(even){
-    overflow: hidden;
-    transition: ease-in-out 0.5s;
-    color:rgb(255, 255, 255);
-    letter-spacing: -1rem;
-}
-.left:hover span:nth-child(even){
-    letter-spacing: 0;
-}
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+        }
+
+        /* ── Nav ── */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            height: 72px;
+            background-color: var(--bg-nav);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .nav-logo {
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--text);
+            letter-spacing: 0.04em;
+            transition: opacity var(--transition);
+        }
+
+        .nav-logo:hover { opacity: 0.85; }
+        .nav-logo .accent { color: var(--accent-muted); }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            position: relative;
+            transition: color var(--transition);
+        }
+
+        nav ul a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width var(--transition);
+            border-radius: 2px;
+        }
+
+        nav ul a:hover,
+        nav ul a.active { color: var(--text); }
+
+        nav ul a:hover::after,
+        nav ul a.active::after { width: 100%; }
+
+        /* ── Page Header ── */
+        .page-header {
+            text-align: center;
+            padding: 5rem 8% 3rem;
+        }
+
+        .page-header .label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--accent-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        .page-header h1 {
+            font-size: clamp(2rem, 4.5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 0.98rem;
+            color: var(--text-muted);
+            max-width: 520px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* ── Services Grid ── */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 1.5rem;
+            padding: 0 8% 5rem;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1.5px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem 1.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+            cursor: default;
+        }
+
+        .service-card:hover {
+            border-color: rgba(221, 61, 61, 0.35);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+        }
+
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: rgba(221, 61, 61, 0.12);
+            border: 1.5px solid rgba(221, 61, 61, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            transition: background var(--transition), border-color var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: rgba(221, 61, 61, 0.2);
+            border-color: var(--accent-muted);
+        }
+
+        .service-card h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+            flex: 1;
+        }
+
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            margin-top: 0.25rem;
+        }
+
+        .service-tag {
+            font-size: 0.72rem;
+            font-weight: 500;
+            padding: 0.25rem 0.65rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--text-muted);
+        }
+
+        /* ── Divider ── */
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: var(--accent-muted);
+            border-radius: 2px;
+            margin: 0 auto 3rem;
+        }
+
+        /* ── Featured Projects ── */
+        .projects-section {
+            padding: 0 8% 6rem;
+        }
+
+        .projects-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .projects-header .label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--accent-muted);
+            margin-bottom: 0.6rem;
+        }
+
+        .projects-header h2 {
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            font-weight: 700;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1.5px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+        }
+
+        .project-card:hover {
+            border-color: rgba(221, 61, 61, 0.35);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+        }
+
+        .project-thumb {
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border-bottom: 1.5px solid var(--border);
+        }
+
+        .project-thumb.blue   { background: linear-gradient(135deg, #0d1b4b, #1a3a8a); }
+        .project-thumb.green  { background: linear-gradient(135deg, #0a2e1a, #1a5c38); }
+        .project-thumb.purple { background: linear-gradient(135deg, #1e0a3c, #4a1a8a); }
+
+        .project-body {
+            padding: 1.4rem 1.6rem 1.6rem;
+        }
+
+        .project-body h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-body p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .project-link {
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 0.35rem 0.9rem;
+            border-radius: 6px;
+            transition: background var(--transition), color var(--transition), border-color var(--transition);
+        }
+
+        .project-link.primary {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .project-link.primary:hover {
+            background: #c73232;
+        }
+
+        .project-link.outline {
+            border: 1.5px solid var(--border);
+            color: var(--text-muted);
+        }
+
+        .project-link.outline:hover {
+            border-color: var(--accent-muted);
+            color: var(--text);
+        }
+
+        /* ── CTA ── */
+        .cta {
+            text-align: center;
+            padding: 4rem 8% 6rem;
+            border-top: 1.5px solid var(--border);
+        }
+
+        .cta h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .cta p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.7rem 1.8rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+
+        .btn:hover { transform: translateY(-2px); }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 4px 18px rgba(224, 60, 60, 0.35);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 6px 24px rgba(224, 60, 60, 0.5);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            nav { padding: 0 6%; }
+            nav ul { gap: 1.2rem; }
+            .page-header { padding: 3.5rem 6% 2rem; }
+            .services-grid,
+            .projects-grid { padding-inline: 6%; gap: 1.2rem; }
+            .projects-section { padding-inline: 6%; }
+            .cta { padding-inline: 6%; }
+        }
+
+        @media (max-width: 480px) {
+            nav ul { display: none; }
+        }
     </style>
 </head>
 <body>
+
     <header>
         <nav>
-            <div class="left">
-                <a href="Jyotirmoyee_Mitra_2024.pdf" target="_blank"><span>J</span><span>yotirmoyee</span> Mitra's Portfolio</a>
-            </div>
-            <div class="right">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="project.html">Projects</a></li>                   
-                    <li><a href="contact.html">Contact Me</a></li>
-    
-                
-                </ul>
-            </div>
+            <a href="Jyotirmoyee_Mitra_2024.pdf" target="_blank" class="nav-logo">
+                <span class="accent">J</span>yotirmoyee Mitra
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <section id="services" class="firstSection">
-            <div class="leftSection">
-                <h1>Umm Hey, its still under constrution, okkay!!</h1>
-                
-                
+
+        <!-- ── Services ── -->
+        <section id="services">
+            <div class="page-header">
+                <p class="label">What I offer</p>
+                <h1>Services</h1>
+                <p>From designing pixel-perfect interfaces to deploying scalable cloud infrastructure — here's how I can help.</p>
             </div>
-            <div class="rightSection">
-                <img src="services.jpg" alt="Projects">
+
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>Building responsive, performant websites and web apps with clean HTML, CSS, and JavaScript. From landing pages to full-stack projects.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">HTML / CSS</span>
+                        <span class="service-tag">JavaScript</span>
+                        <span class="service-tag">React</span>
+                        <span class="service-tag">REST APIs</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">☁</div>
+                    <h3>AWS DevOps Engineering</h3>
+                    <p>Designing and maintaining CI/CD pipelines, containerised workloads, and cloud infrastructure on AWS for reliable, scalable deployments.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">AWS</span>
+                        <span class="service-tag">Docker</span>
+                        <span class="service-tag">CI/CD</span>
+                        <span class="service-tag">Terraform</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>UX Design</h3>
+                    <p>Crafting intuitive user experiences through wireframes, prototypes, and design systems that balance aesthetics with usability.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">Figma</span>
+                        <span class="service-tag">Wireframing</span>
+                        <span class="service-tag">Prototyping</span>
+                        <span class="service-tag">Design Systems</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚙</div>
+                    <h3>Cloud Engineering</h3>
+                    <p>Architecting resilient cloud solutions — from serverless functions and managed databases to VPC networking and IAM security best practices.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">EC2 / Lambda</span>
+                        <span class="service-tag">S3 / RDS</span>
+                        <span class="service-tag">CloudFormation</span>
+                        <span class="service-tag">IAM</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔒</div>
+                    <h3>Cloud Security</h3>
+                    <p>Applying security best practices across cloud environments — identity management, encryption at rest and in transit, and compliance auditing.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">IAM Policies</span>
+                        <span class="service-tag">KMS</span>
+                        <span class="service-tag">GuardDuty</span>
+                        <span class="service-tag">Compliance</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Monitoring & Observability</h3>
+                    <p>Setting up dashboards, alerting, and log aggregation so you always know what's happening in your infrastructure before users do.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">CloudWatch</span>
+                        <span class="service-tag">Grafana</span>
+                        <span class="service-tag">Prometheus</span>
+                        <span class="service-tag">ELK Stack</span>
+                    </div>
+                </div>
+
             </div>
         </section>
+
+        <!-- ── Featured Projects ── -->
+        <section class="projects-section">
+            <div class="section-divider"></div>
+            <div class="projects-header">
+                <p class="label">Work samples</p>
+                <h2>Featured Projects</h2>
+            </div>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-thumb blue">☁</div>
+                    <div class="project-body">
+                        <h3>AWS Three-Tier Architecture</h3>
+                        <p>Deployed a scalable three-tier web application on AWS using EC2, RDS, and ALB with auto-scaling groups and a CloudFormation template.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary">View Details</a>
+                            <a href="#" class="project-link outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-thumb green">🌐</div>
+                    <div class="project-body">
+                        <h3>Portfolio Website</h3>
+                        <p>Designed and built this responsive personal portfolio using pure HTML, CSS, and JavaScript — no frameworks, fast load, mobile-first.</p>
+                        <div class="project-links">
+                            <a href="index.html" class="project-link primary">Live Site</a>
+                            <a href="#" class="project-link outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-thumb purple">⚙</div>
+                    <div class="project-body">
+                        <h3>CI/CD Pipeline with GitHub Actions</h3>
+                        <p>Built an end-to-end pipeline that lints, tests, builds a Docker image, and deploys to AWS ECS on every push to main.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary">View Details</a>
+                            <a href="#" class="project-link outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── CTA ── -->
+        <section class="cta">
+            <h2>Have a project in mind?</h2>
+            <p>Let's build something great together. I'm open to freelance, contracts, and full-time opportunities.</p>
+            <a href="contact.html" class="btn btn-primary">Get in Touch &#8594;</a>
+        </section>
+
     </main>
 
-    <footer>
-        <!-- Footer section (if applicable) -->
-    </footer>
 </body>
 </html>
+
+
