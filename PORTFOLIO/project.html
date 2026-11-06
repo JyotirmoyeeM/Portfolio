@@ -3,14 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Jyotirmoyee Mitra</title>
+    <title>Backend &amp; Data Engineering Projects | Jyotirmoyee Mitra</title>
+    <meta name="description" content="Explore backend and data engineering projects by Jyotirmoyee Mitra, including AWS ETL, Kafka streaming, analytics APIs, and a personal portfolio website.">
+    <meta name="author" content="Jyotirmoyee Mitra">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jyotirmoyeemitra.netlify.app/PORTFOLIO/project.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jyotirmoyee Mitra Portfolio">
+    <meta property="og:title" content="Backend &amp; Data Engineering Projects | Jyotirmoyee Mitra">
+    <meta property="og:description" content="Selected Python backend, AWS data, Kafka, and analytics projects.">
+    <meta property="og:url" content="https://jyotirmoyeemitra.netlify.app/PORTFOLIO/project.html">
+    <meta property="og:image" content="https://jyotirmoyeemitra.netlify.app/PORTFOLIO/Screenshot%202026-11-06%20185819.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects | Jyotirmoyee Mitra">
+    <meta name="twitter:description" content="Selected Python backend, AWS data, Kafka, and analytics projects.">
+    <meta name="twitter:image" content="https://jyotirmoyeemitra.netlify.app/PORTFOLIO/Screenshot%202026-11-06%20185819.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-dark: #1a0220;
-            --bg-nav: #280330;
             --bg-card: #220229;
             --accent: #e03c3c;
             --accent-muted: rgba(221, 61, 61, 0.75);
@@ -215,11 +228,6 @@
             color: #fff;
         }
 
-        .project-links .secondary {
-            border: 1px solid var(--border);
-            color: var(--text);
-        }
-
         .cta {
             text-align: center;
             padding: 0 8% 5rem;
@@ -248,17 +256,12 @@
             box-shadow: 0 4px 18px rgba(224, 60, 60, 0.35);
         }
 
-        @media (max-width: 768px) {
-            nav { padding: 0 6%; }
-            nav ul { gap: 1.1rem; }
-            .projects-header, .projects-grid, .cta { padding-left: 6%; padding-right: 6%; }
-        }
-
         @media (max-width: 480px) {
-            nav ul { display: none; }
             .projects-grid { grid-template-columns: 1fr; }
         }
     </style>
+    <link rel="stylesheet" href="site-refinements.css">
+    <script src="navigation.js" defer></script>
 </head>
 <body>
     <header>
@@ -266,9 +269,13 @@
             <a href="Jyotirmoyee_Mitra_Resume_.pdf" target="_blank" class="nav-logo">
                 <span class="accent">J</span>yotirmoyee Mitra
             </a>
-            <ul>
+            <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="primary-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="resume-tour.html">Resume Tour</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="project.html" class="active">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -299,7 +306,6 @@
                     </div>
                     <div class="project-links">
                         <a href="index.html" class="primary">View Site</a>
-                        <a href="#" class="secondary">Brand</a>
                     </div>
                 </div>
             </article>
@@ -315,10 +321,6 @@
                         <span>S3</span>
                         <span>Redshift</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="primary">Data Flow</a>
-                        <a href="#" class="secondary">Impact</a>
-                    </div>
                 </div>
             </article>
 
@@ -332,10 +334,6 @@
                         <span>Python</span>
                         <span>FastAPI</span>
                         <span>Streaming</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="primary">Pipeline</a>
-                        <a href="#" class="secondary">Architecture</a>
                     </div>
                 </div>
             </article>
@@ -351,10 +349,6 @@
                         <span>PostgreSQL</span>
                         <span>Redis</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="primary">API</a>
-                        <a href="#" class="secondary">Dashboards</a>
-                    </div>
                 </div>
             </article>
 
@@ -368,10 +362,6 @@
                         <span>pytest</span>
                         <span>Docker</span>
                         <span>Monitoring</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="primary">Automation</a>
-                        <a href="#" class="secondary">Reliability</a>
                     </div>
                 </div>
             </article>
@@ -387,10 +377,6 @@
                         <span>SQL</span>
                         <span>Warehouse</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="primary">Data Merge</a>
-                        <a href="#" class="secondary">Insights</a>
-                    </div>
                 </div>
             </article>
 
@@ -404,10 +390,6 @@
                         <span>Flask</span>
                         <span>REST</span>
                         <span>Auth</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="primary">API</a>
-                        <a href="#" class="secondary">Security</a>
                     </div>
                 </div>
             </article>
@@ -423,10 +405,6 @@
                         <span>CRUD</span>
                         <span>Dashboard</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="primary">Tracker</a>
-                        <a href="#" class="secondary">Logic</a>
-                    </div>
                 </div>
             </article>
 
@@ -440,10 +418,6 @@
                         <span>Flask</span>
                         <span>CRUD</span>
                         <span>Web App</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="primary">Tasks</a>
-                        <a href="#" class="secondary">App</a>
                     </div>
                 </div>
             </article>

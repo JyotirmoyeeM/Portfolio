@@ -3,14 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Jyotirmoyee Mitra</title>
+    <title>Contact Jyotirmoyee Mitra | Python Backend &amp; Data Engineer</title>
+    <meta name="description" content="Contact Jyotirmoyee Mitra, a Python backend and data engineer in Bengaluru, about backend roles, data platforms, and engineering opportunities.">
+    <meta name="author" content="Jyotirmoyee Mitra">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jyotirmoyeemitra.netlify.app/PORTFOLIO/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jyotirmoyee Mitra Portfolio">
+    <meta property="og:title" content="Contact Jyotirmoyee Mitra | Python Backend &amp; Data Engineer">
+    <meta property="og:description" content="Get in touch with Jyotirmoyee Mitra about Python backend, data engineering, and cloud roles.">
+    <meta property="og:url" content="https://jyotirmoyeemitra.netlify.app/PORTFOLIO/contact.html">
+    <meta property="og:image" content="https://jyotirmoyeemitra.netlify.app/PORTFOLIO/Screenshot%202026-11-06%20185819.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Jyotirmoyee Mitra">
+    <meta name="twitter:description" content="Get in touch about Python backend, data engineering, and cloud roles.">
+    <meta name="twitter:image" content="https://jyotirmoyeemitra.netlify.app/PORTFOLIO/Screenshot%202026-11-06%20185819.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-dark: #1a0220;
-            --bg-nav: #280330;
             --bg-card: #220229;
             --accent: #e03c3c;
             --accent-muted: rgba(221, 61, 61, 0.75);
@@ -116,7 +129,7 @@
             margin-bottom: 1rem;
         }
 
-        .contact-info p {
+        .contact-info > p:not(.label) {
             color: var(--text-muted);
             line-height: 1.8;
             margin-bottom: 1rem;
@@ -191,29 +204,55 @@
             width: min(420px, 40vw);
         }
 
-        .image-box {
-            width: 100%;
-            min-height: 320px;
-            border-radius: 18px;
-            background: linear-gradient(135deg, rgba(224,60,60,0.2), rgba(40,3,48,0.8));
-            border: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
+        .contact-focus {
+            max-width: 380px;
+            padding: 1rem 0 1rem 1.5rem;
+            border-left: 2px solid rgba(221, 61, 61, 0.55);
+        }
+
+        .contact-focus .focus-label {
+            margin: 0 0 0.7rem;
+            color: var(--accent-muted);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .contact-focus h2 {
+            margin: 0 0 0.75rem;
+            font-size: 1.45rem;
+            line-height: 1.35;
+        }
+
+        .contact-focus > p:not(.focus-label) {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.75;
+        }
+
+        .focus-list {
+            display: grid;
+            gap: 0.65rem;
+            margin: 1.2rem 0 0;
+            padding: 0;
+            color: var(--text-muted);
+            font-size: 0.86rem;
+            list-style: none;
+        }
+
+        .focus-list li {
+            padding-top: 0.65rem;
+            border-top: 1px solid var(--border);
         }
 
         @media (max-width: 768px) {
-            nav { padding: 0 6%; }
-            nav ul { gap: 1rem; }
             .contact-wrap { flex-direction: column; padding: 4rem 5%; }
             .contact-visual { width: min(300px, 80vw); }
         }
-
-        @media (max-width: 480px) {
-            nav ul { display: none; }
-        }
     </style>
+    <link rel="stylesheet" href="site-refinements.css">
+    <script src="navigation.js" defer></script>
 </head>
 <body>
     <header>
@@ -221,9 +260,13 @@
             <a href="Jyotirmoyee_Mitra_Resume_.pdf" target="_blank" class="nav-logo">
                 <span class="accent">J</span>yotirmoyee Mitra
             </a>
-            <ul>
+            <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="primary-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="resume-tour.html">Resume Tour</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="project.html">Projects</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
@@ -235,8 +278,8 @@
         <section class="contact-wrap">
             <div class="contact-info">
                 <p class="label">Let’s connect</p>
-                <h1>Contact Me</h1>
-                <p>I’m actively looking for Python backend, data engineering, and cloud-focused opportunities where I can build reliable systems, automate workflows, and deliver scalable data solutions.</p>
+                <h1>Contact Jyotirmoyee</h1>
+                <p>I’m a Python backend and data engineer based in Bengaluru, currently building analytics APIs at eBay. I’m open to conversations about backend/SDE roles, data platforms, and engineering opportunities.</p>
 
                 <div class="contact-card">
                     <div class="contact-item">
@@ -258,14 +301,21 @@
                 </div>
 
                 <div class="contact-actions">
-                    <a href="mailto:jyotirmoyee25mitra@gmail.com" class="action-btn primary">Email Me</a>
+                    <a href="mailto:jyotirmoyee25mitra@gmail.com?subject=Portfolio%20inquiry" class="action-btn primary">Email Me</a>
                     <a href="Jyotirmoyee_Mitra_Resume_.pdf" target="_blank" class="action-btn secondary">View Resume</a>
-                    <a href="https://github.com/JyotirmoyeeM" target="_blank" class="action-btn secondary">GitHub</a>
+                    <a href="https://linkedin.com/in/jyotirmoyee-mitra-5210a41a5" target="_blank" rel="noopener noreferrer" class="action-btn secondary">Connect on LinkedIn</a>
                 </div>
             </div>
 
-            <div class="contact-visual">
-                <div class="image-box">✉️</div>
+            <div class="contact-visual contact-focus">
+                <p class="focus-label">What I’m looking for</p>
+                <h2>Backend systems that make a difference.</h2>
+                <p>I’m especially interested in roles where I can bring together Python services, data engineering, and cloud platforms.</p>
+                <ul class="focus-list">
+                    <li>Python backend and senior SDE roles</li>
+                    <li>Data platforms and dependable pipelines</li>
+                    <li>APIs, automation, and distributed systems</li>
+                </ul>
             </div>
         </section>
     </main>

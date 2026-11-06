@@ -12,6 +12,7 @@ The site is built with HTML, CSS, and JavaScript. It uses Typed.js from a CDN fo
 
 - `PORTFOLIO/index.html` - Homepage, introduction, and resume link
 - `PORTFOLIO/about.html` - Professional bio and artwork
+- `PORTFOLIO/resume-tour.html` - Animated professional timeline based on my resume
 - `PORTFOLIO/services.html` - Technical capabilities
 - `PORTFOLIO/project.html` - Selected projects
 - `PORTFOLIO/contact.html` - Contact details and profile links
@@ -29,6 +30,10 @@ Then open <http://localhost:8000/PORTFOLIO/index.html>.
 ## Deployment
 
 Netlify is configured to publish the repository root through `netlify.toml`. The repository also includes a GitHub Actions workflow that deploys the root to GitHub Pages when changes are pushed to `main`.
+
+## Search Indexing
+
+`robots.txt` points crawlers to `sitemap.xml`, which lists the portfolio pages. To request indexing, verify the site in Google Search Console and submit `https://jyotirmoyeemitra.netlify.app/sitemap.xml`.
 
 ## Highlights
 
