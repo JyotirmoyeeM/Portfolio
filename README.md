@@ -1,33 +1,39 @@
 
-# 🔥 Jyotirmoyee Mitra's Portfolio
+# Jyotirmoyee Mitra | Portfolio
 
-[![Live Demo](https://img.shields.io/badge/🚀_View_Live-Portfolio-8A2BE2?style=for-the-badge&logo=netlify)](https://jyotirmoyeemitra.netlify.app/)
-[![GitHub Code](https://img.shields.io/badge/👩💻_Source_Code-181717?style=for-the-badge&logo=github)](https://github.com/yourusername/portfolio-repo)
+Personal portfolio highlighting my work and interests as a Python Backend Engineer and Data Engineer.
 
-## ✨ Signature Features
+- Live site: [jyotirmoyeemitra.netlify.app](https://jyotirmoyeemitra.netlify.app/)
+- Source: [github.com/JyotirmoyeeM/Portfolio](https://github.com/JyotirmoyeeM/Portfolio)
 
-### 🎨 Dynamic Navbar Magic
-```html
-<!-- Hover-triggered letter spacing animation -->
-<div class="left">
-  <a href="resume.pdf"><span>J</span><span>yotirmoyee</span> Mitra's Portfolio</a>
-</div>
-CSS Sorcery: Letters expand with transition: ease-in-out 0.5s
+## Site
 
-Color Alchemy: Purple-to-red hover effects (rgb(50, 4, 61) → rgba(221, 61, 61, 0.692))
+The site is built with HTML, CSS, and JavaScript. It uses Typed.js from a CDN for the animated role text on the homepage.
 
-🖥️ Full Portfolio Highlights
-Section	Tech Used	Interactive Elements
-Home	HTML5, CSS3	Animated background
-About	Flexbox	Responsive bio layout
-Projects	JavaScript	Filterable gallery
-🛠️ Tech Stack
-bash
-▸ Frontend: HTML5, CSS3, JavaScript
-▸ Hosting: Netlify 
-▸ Version Control: Git/GitHub
-▸ Design: Custom SVG graphics
-🎯 Quick Navigation
-About
-Projects
-Contact
+- `PORTFOLIO/index.html` - Homepage, introduction, and resume link
+- `PORTFOLIO/about.html` - Professional bio and artwork
+- `PORTFOLIO/services.html` - Technical capabilities
+- `PORTFOLIO/project.html` - Selected projects
+- `PORTFOLIO/contact.html` - Contact details and profile links
+
+## Run Locally
+
+From the repository root, start a local static server:
+
+```bash
+python -m http.server 8000
+```
+
+Then open <http://localhost:8000/PORTFOLIO/index.html>.
+
+## Deployment
+
+Netlify is configured to publish the repository root through `netlify.toml`. The repository also includes a GitHub Actions workflow that deploys the root to GitHub Pages when changes are pushed to `main`.
+
+## Highlights
+
+- Responsive multi-page portfolio
+- Resume view and download links
+- Project summaries focused on backend and data engineering
+- Artwork linked to Instagram
+- AI-assisted development described as part of my workflow
