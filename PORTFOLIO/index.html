@@ -30,7 +30,10 @@
         }
 
         body {
-            background-color: var(--bg-dark);
+            background:
+                radial-gradient(circle at top left, rgba(224, 60, 60, 0.15), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.15), transparent 35%),
+                var(--bg-dark);
             color: var(--text);
             font-family: 'Poppins', sans-serif;
             min-height: 100vh;
@@ -45,8 +48,9 @@
             align-items: center;
             padding: 0 5%;
             height: 72px;
-            background-color: var(--bg-nav);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+            background: rgba(40, 3, 48, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
         }
 
         .nav-logo {
@@ -121,12 +125,12 @@
         }
 
         .hero-text .greeting {
-            font-size: 1rem;
-            font-weight: 400;
-            color: var(--text-muted);
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--accent-muted);
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.8rem;
         }
 
         .hero-text h1 {
@@ -222,6 +226,10 @@
             pointer-events: none;
         }
 
+        .image-wrapper {
+            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.28);
+        }
+
         .image-wrapper img {
             width: 100%;
             display: block;
@@ -289,15 +297,16 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-text">
-                <p class="greeting">Python Backend & Data Engineer</p>
+                <p class="greeting">Python Backend Engineer • Data Engineer</p>
                 <h1>
                     Hey, I'm
                     <span class="name">Jyotirmoyee.</span>
                 </h1>
                 <p class="role-line">Building <span id="typed-role"></span> for scalable systems</p>
-                <p class="tagline">I design and deliver production-grade FastAPI and Flask services, ETL pipelines, Kafka streaming solutions, and AWS-native data platforms for modern business applications.</p>
+                <p class="tagline">I build resilient backend systems, data pipelines, and AWS-driven solutions that power real business workflows and modern data platforms.</p>
                 <div class="hero-actions">
-                    <a href="project.html" class="btn btn-primary">View Projects</a>
+                    <a href="Jyotirmoyee_Mitra_Resume_.pdf" target="_blank" class="btn btn-primary">View Resume</a>
+                    <a href="project.html" class="btn btn-outline">View Projects</a>
                     <a href="contact.html" class="btn btn-outline">Get in Touch</a>
                 </div>
             </div>
