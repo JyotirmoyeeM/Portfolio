@@ -41,16 +41,20 @@
 
         nav {
             position: sticky;
-            top: 0;
+            top: 18px;
             z-index: 100;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: min(1200px, calc(100% - 32px));
+            margin: 0 auto;
             padding: 0 5%;
             height: 72px;
-            background: rgba(40, 3, 48, 0.9);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+            background: rgba(40, 3, 48, 0.82);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 18px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
         }
 
         .nav-logo {
@@ -162,6 +166,24 @@
             color: var(--text-muted);
             line-height: 1.7;
             max-width: 420px;
+        }
+
+        .skill-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1.8rem;
+        }
+
+        .skill-chip {
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-muted);
+            font-size: 0.72rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
         }
 
         .hero-actions {
@@ -303,7 +325,15 @@
                     <span class="name">Jyotirmoyee.</span>
                 </h1>
                 <p class="role-line">Building <span id="typed-role"></span> for scalable systems</p>
-                <p class="tagline">I build resilient backend systems, data pipelines, and AWS-driven solutions that power real business workflows and modern data platforms.</p>
+                <p class="tagline">I build resilient backend systems and AWS-driven data platforms that power real business workflows, automate operations, and unlock data-driven decision-making.</p>
+                <div class="skill-strip">
+                    <span class="skill-chip">Python</span>
+                    <span class="skill-chip">FastAPI</span>
+                    <span class="skill-chip">Flask</span>
+                    <span class="skill-chip">Kafka</span>
+                    <span class="skill-chip">PySpark</span>
+                    <span class="skill-chip">AWS</span>
+                </div>
                 <div class="hero-actions">
                     <a href="Jyotirmoyee_Mitra_Resume_.pdf" target="_blank" class="btn btn-primary">View Resume</a>
                     <a href="project.html" class="btn btn-outline">View Projects</a>

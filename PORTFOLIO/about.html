@@ -39,16 +39,20 @@
         /* ── Nav ── */
         nav {
             position: sticky;
-            top: 0;
+            top: 18px;
             z-index: 100;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: min(1200px, calc(100% - 32px));
+            margin: 0 auto;
             padding: 0 5%;
             height: 72px;
-            background-color: var(--bg-nav);
-            backdrop-filter: blur(8px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+            background: rgba(40, 3, 48, 0.82);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 18px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
         }
 
         .nav-logo {
@@ -219,6 +223,28 @@
             width: min(380px, 40vw);
         }
 
+        .art-link {
+            display: block;
+            text-decoration: none;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(221, 61, 61, 0.25);
+            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.28);
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+
+        .art-link:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 28px 60px rgba(0, 0, 0, 0.35);
+        }
+
+        .art-link img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
         .image-wrapper {
             position: relative;
             border-radius: 16px;
@@ -303,11 +329,9 @@
             <div class="about-text">
                 <p class="label">Get to know me</p>
                 <h1>About Me</h1>
-                <p>I’m a Python Backend Engineer and Data Engineer with 4+ years of experience designing and delivering backend systems, ETL pipelines, and real-time data flows for business-critical applications.</p>
-                <p>At the same time, I’m also an artist at heart. I enjoy drawing, painting, and creating visual pieces that I occasionally share on <a href="https://www.instagram.com/the.commons_uncommon/" target="_blank" style="color: #f5b7b1; text-decoration: none;">Instagram</a>, where my creative side gets a space beyond work.</p>
-                <p>My work includes building FastAPI and Flask services, automating data ingestion and transformation using PySpark and AWS Glue, and integrating Kafka-based streaming workflows with cloud-native storage and analytics platforms such as S3, Redshift, and PostgreSQL.</p>
-                <p>Outside of work, I’m a big fan of detective and thriller novels, which is probably why I love solving problems, understanding patterns, and building systems that are thoughtful, structured, and dependable.</p>
-                <p>I focus on building reliable, scalable systems with strong API design, observability, CI/CD automation, and operational efficiency across enterprise data environments.</p>
+                <p>I’m a Python Backend Engineer and Data Engineer who enjoys building reliable systems, clean APIs, and scalable data workflows that actually support real business decisions.</p>
+                <p>I work with FastAPI, Flask, Kafka, PySpark, AWS, and modern data tools to design backend services, ETL pipelines, and cloud-native solutions that are practical, resilient, and measurable.</p>
+                <p>Beyond tech, I’m an artist at heart. I sketch, paint, and share my work on <a href="https://www.instagram.com/the.commons_uncommon/" target="_blank" style="color: #f5b7b1; text-decoration: none;">Instagram</a>, and I’m also a big fan of detective and thriller novels—so problem-solving, patterns, and storytelling are all part of how I think.</p>
 
                 <div class="tags">
                     <span class="tag">Python</span>
@@ -335,9 +359,9 @@
             </div>
 
             <div class="about-image">
-                <div class="image-wrapper">
-                    <img src="about.jpg" alt="Jyotirmoyee Mitra">
-                </div>
+                <a class="art-link" href="https://www.instagram.com/the.commons_uncommon/p/DYEL3BvETGH/" target="_blank" aria-label="View my artwork on Instagram">
+                    <img src="../686533209_18213831760325742_5411562713450178095_n.webp" alt="My artwork by Jyotirmoyee Mitra">
+                </a>
             </div>
         </section>
     </main>

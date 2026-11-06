@@ -31,14 +31,19 @@
 
         nav {
             position: sticky;
-            top: 0;
+            top: 18px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: min(1200px, calc(100% - 32px));
+            margin: 0 auto;
             padding: 0 5%;
             height: 72px;
-            background: var(--bg-nav);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+            background: rgba(40, 3, 48, 0.82);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 18px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
         }
 
         .nav-logo {
@@ -248,11 +253,16 @@
                         <span>LinkedIn</span>
                         <a href="https://linkedin.com/in/jyotirmoyee-mitra-5210a41a5" target="_blank">linkedin.com/in/jyotirmoyee-mitra-5210a41a5</a>
                     </div>
+                    <div class="contact-item">
+                        <span>GitHub</span>
+                        <a href="https://github.com/JyotirmoyeeM" target="_blank">github.com/JyotirmoyeeM</a>
+                    </div>
                 </div>
 
                 <div class="contact-actions">
                     <a href="mailto:jyotirmoyee25mitra@gmail.com" class="action-btn primary">Email Me</a>
                     <a href="Jyotirmoyee_Mitra_Resume_.pdf" target="_blank" class="action-btn secondary">View Resume</a>
+                    <a href="https://github.com/JyotirmoyeeM" target="_blank" class="action-btn secondary">GitHub</a>
                 </div>
             </div>
 

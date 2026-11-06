@@ -31,15 +31,20 @@
 
         nav {
             position: sticky;
-            top: 0;
+            top: 18px;
             z-index: 10;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: min(1200px, calc(100% - 32px));
+            margin: 0 auto;
             padding: 0 5%;
             height: 72px;
-            background: var(--bg-nav);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+            background: rgba(40, 3, 48, 0.82);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 18px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
         }
 
         .nav-logo {
@@ -266,10 +271,28 @@
         <section class="projects-header">
             <p class="label">Selected work</p>
             <h1>Projects</h1>
-            <p>My recent work is centered around backend engineering, data pipelines, ETL automation, and cloud-native systems aligned with the experience in my resume.</p>
+            <p>I build practical backend, data, and automation solutions, and I use AI tools strategically to improve code quality, speed up problem-solving, and refine user experience. This portfolio is one example of combining technical execution with thoughtful product thinking.</p>
         </section>
 
         <section class="projects-grid">
+            <article class="project-card">
+                <div class="project-thumb thumb-3">🌐</div>
+                <div class="project-body">
+                    <h3>Portfolio Website</h3>
+                    <p>Designed and built this personal portfolio website to showcase my backend engineering, data engineering, and cloud-focused experience with a premium visual identity. I also use AI tools to improve writing clarity, iterate on design ideas, and speed up polishing without compromising technical accuracy.</p>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>AI-assisted</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="index.html" class="primary">View Site</a>
+                        <a href="#" class="secondary">Brand</a>
+                    </div>
+                </div>
+            </article>
+
             <article class="project-card">
                 <div class="project-thumb thumb-1">📊</div>
                 <div class="project-body">
