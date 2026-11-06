@@ -187,6 +187,22 @@
         .timeline-company { font-size: 1rem; font-weight: 600; }
         .timeline-role { color: var(--text-muted); font-size: 0.78rem; }
 
+        .timeline-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            margin-top: 0.45rem;
+        }
+
+        .timeline-keywords span {
+            padding: 0.18rem 0.5rem;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            color: var(--text-muted);
+            font-size: 0.65rem;
+            line-height: 1.5;
+        }
+
         .timeline-toggle {
             flex: 0 0 auto;
             width: 0.55rem;
@@ -315,10 +331,13 @@
                             <span class="timeline-heading-main">
                                 <span class="timeline-company">Capgemini</span>
                                 <span class="timeline-role">Senior Software Analyst (Python Developer)</span>
+                                <span class="timeline-keywords" aria-label="Key technologies and focus areas">
+                                    <span>Python</span><span>AWS Lambda</span><span>API Gateway</span><span>S3</span><span>CloudWatch</span><span>SQL</span>
+                                </span>
                             </span>
                             <span class="timeline-toggle" aria-hidden="true"></span>
                         </summary>
-                        <div class="timeline-detail"><p>Built Python backend services for point-of-sale order and payment flows, using AWS Lambda, API Gateway, S3, and CloudWatch.</p></div>
+                        <div class="timeline-detail"><p>Built and maintained Python backend services for NPOS order and payment flows. Integrated AWS Lambda, API Gateway, S3, and CloudWatch; optimized SQL queries and supported banner promotion logic and real-time interface updates.</p></div>
                     </details>
                 </li>
                 <li class="timeline-stop">
@@ -329,10 +348,13 @@
                             <span class="timeline-heading-main">
                                 <span class="timeline-company">Accenture</span>
                                 <span class="timeline-role">Python Developer (Data Engineer)</span>
+                                <span class="timeline-keywords" aria-label="Key technologies and focus areas">
+                                    <span>AWS Glue</span><span>PySpark</span><span>S3</span><span>Flask</span><span>PyTest</span><span>Jenkins CI/CD</span>
+                                </span>
                             </span>
                             <span class="timeline-toggle" aria-hidden="true"></span>
                         </summary>
-                        <div class="timeline-detail"><p>Built AWS Glue and PySpark pipelines for Food &amp; Paper data, processing <strong>5M+ records each day</strong>. Pipeline tuning cut runtime by <strong>25%</strong>, and Jenkins automation reduced deployment time by <strong>40%</strong>.</p></div>
+                        <div class="timeline-detail"><p>Built AWS Glue and PySpark ETL pipelines for Food &amp; Paper data from S3, processing <strong>5M+ records each day</strong> and reducing runtime by <strong>25%</strong>. Flask validation services improved data accuracy to <strong>99.8%</strong>; Jenkins CI/CD automation reduced deployment time by <strong>40%</strong>.</p></div>
                     </details>
                 </li>
                 <li class="timeline-stop">
@@ -343,10 +365,13 @@
                             <span class="timeline-heading-main">
                                 <span class="timeline-company">Dell Technologies</span>
                                 <span class="timeline-role">Python Developer | via UST Global</span>
+                                <span class="timeline-keywords" aria-label="Key technologies and focus areas">
+                                    <span>FastAPI / Flask</span><span>Async Python</span><span>AWS Glue</span><span>PySpark</span><span>Kafka</span><span>Redis</span><span>MongoDB</span><span>GitLab CI/CD</span>
+                                </span>
                             </span>
                             <span class="timeline-toggle" aria-hidden="true"></span>
                         </summary>
-                        <div class="timeline-detail"><p>Worked across async FastAPI/Flask services, AWS Glue pipelines processing <strong>5M+ records daily</strong>, Redis caching, and Kafka consumers. Added retry logic, health checks, tests, and structured logging.</p></div>
+                        <div class="timeline-detail"><p>Built async FastAPI/Flask services with background schedulers, retries, and health checks. Developed AWS Glue/PySpark pipelines for <strong>5M+ daily records</strong> from S3 to Redshift/Athena, reducing runtime by <strong>25%</strong>. Also worked on Redis caching, Kafka-to-MongoDB flows, automated tests, GitLab CI/CD, and structured logging.</p></div>
                     </details>
                 </li>
                 <li class="timeline-stop">
@@ -357,10 +382,13 @@
                             <span class="timeline-heading-main">
                                 <span class="timeline-company">Genpact</span>
                                 <span class="timeline-role">Python Developer</span>
+                                <span class="timeline-keywords" aria-label="Key technologies and focus areas">
+                                    <span>Python</span><span>Netskope REST API</span><span>Secure authentication</span><span>CSV reporting</span><span>Git workflow</span>
+                                </span>
                             </span>
                             <span class="timeline-toggle" aria-hidden="true"></span>
                         </summary>
-                        <div class="timeline-detail"><p>Created secure Python automation for Netskope compliance reporting across <strong>10,000+ devices</strong>, turning REST API data into structured CSV reports.</p></div>
+                        <div class="timeline-detail"><p>Automated Netskope REST API compliance reporting across <strong>10,000+ devices</strong>. Used environment variables and CLI parameters for authentication and configurable filters, then transformed responses into structured CSV reports. Followed a fork, commit, and pull-request Git workflow.</p></div>
                     </details>
                 </li>
                 <li class="timeline-stop">
@@ -371,10 +399,13 @@
                             <span class="timeline-heading-main">
                                 <span class="timeline-company">eBay <span class="timeline-role">via Prescience</span></span>
                                 <span class="timeline-role">Python Backend Developer | CortexAI</span>
+                                <span class="timeline-keywords" aria-label="Key technologies and focus areas">
+                                    <span>Python</span><span>REST APIs</span><span>Hive SQL</span><span>Parquet</span><span>Redis</span><span>Analytics / BI</span>
+                                </span>
                             </span>
                             <span class="timeline-toggle" aria-hidden="true"></span>
                         </summary>
-                        <div class="timeline-detail"><p>I build Python services and REST APIs for CortexAI analytics dashboards, using Hive SQL, Parquet datasets, and Redis caching.</p></div>
+                        <div class="timeline-detail"><p>Build Python services and REST APIs for CortexAI analytics dashboards. Optimize Hive SQL queries, retrieve Parquet datasets from Google Drive for retail year/week reporting, add Redis caching, and validate data mappings across business segments.</p></div>
                     </details>
                 </li>
             </ol>
