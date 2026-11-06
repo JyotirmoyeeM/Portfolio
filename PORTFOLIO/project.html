@@ -149,6 +149,15 @@
             justify-content: center;
             font-size: 3rem;
             border-bottom: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .project-thumb img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
         }
 
         .thumb-1 { background: linear-gradient(135deg, #0d1b4b, #1a3a8a); }
@@ -276,7 +285,9 @@
 
         <section class="projects-grid">
             <article class="project-card">
-                <div class="project-thumb thumb-3">🌐</div>
+                <div class="project-thumb">
+                    <img src="Screenshot%202026-11-06%20185819.png" alt="Screenshot of my portfolio website homepage">
+                </div>
                 <div class="project-body">
                     <h3>Portfolio Website</h3>
                     <p>Designed and built this personal portfolio website to showcase my backend engineering, data engineering, and cloud-focused experience with a premium visual identity. I also use AI tools to improve writing clarity, iterate on design ideas, and speed up polishing without compromising technical accuracy.</p>
