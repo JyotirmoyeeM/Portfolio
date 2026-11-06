@@ -1,150 +1,4 @@
 
-
-<!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Jyotirmoyee Mitra PORTFOLIO</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-      <style>
-          * {
-              margin: 0;
-              padding: 0;
-          }
-          body {
-              background-color: rgb(35, 3, 43);
-              color: rgb(255, 255, 255);
-              font-family: 'Poppins', sans-serif;
-          }
-          nav {
-              display: flex;
-              justify-content: space-around;
-              align-items: center;
-              height: 75px;
-              background-color: rgb(50, 4, 61);
-          }
-          nav ul {
-              display: flex;
-              justify-content: space-around;
-          }
-          nav ul li {
-              list-style: none;
-              margin: 20px;
-          }
-          nav ul li:last-child {
-              margin-right: 0;
-          }
-          nav ul li a {
-              text-decoration: none;
-              color: rgb(255, 255, 255);
-              transition: color 0.3s ease;
-          }
-          nav ul li a:hover {
-              color: rgba(221, 61, 61, 0.692);
-              font-size: 1.4rem;
-          }
-          .left {
-              font-size: 1.20rem;
-              margin: 0;
-              padding: 0;
-              text-transform: uppercase;
-          }
-          .left a {
-              text-decoration: none;
-              color: rgb(255, 255, 255);
-              transition: color 0.3s ease;
-          }
-          .left span {
-              display: inline-flex;
-              color: rgba(221, 61, 61, 0.692);
-          }
-          .left span:nth-child(even) {
-              overflow: hidden;
-              transition: ease-in-out 0.5s;
-              color: rgb(255, 255, 255);
-              letter-spacing: -1rem;
-          }
-          .left:hover span:nth-child(even) {
-              letter-spacing: 0;
-          }
-          .firstSection {
-              display: flex;
-              justify-content: space-around;
-              align-items: center;
-              margin: 55px;
-          }
-          .leftSection {
-              width: 50%;
-              font-size: 2rem;
-          }
-          .rightSection {
-              width: 40%;
-          }
-          .rightSection img {
-              width: 100%;
-              border-radius: 10px;
-          }
-          .Name {
-              color: rgba(221, 61, 61, 0.692);
-              font-weight: bold;
-          }
-          #element {
-              color: rgba(221, 61, 61, 0.692);
-          }
-      </style>
-  </head>
-  <body>
-      <header>
-          <nav>
-              <div class="left">
-                  <a href="Jyotirmoyee_Mitra_2024.pdf" target="_blank"><span>J</span><span>yotirmoyee</span> Mitra's Portfolio</a>
-              </div>
-              <div class="right">
-                  <ul>
-                      <li><a href="#home">Home</a></li>
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="services.html">Services</a></li>
-                      <li><a href="project.html">Projects</a></li>
-                      <li><a href="contact.html">Contact Me</a></li>
-                  </ul>
-              </div>
-          </nav>
-      </header>
-
-      <main>
-          <section id="home" class="firstSection">
-              <div class="leftSection">
-                  <h1>Hey, I'm <span class="Name">Jyotirmoyee.</span></h1>
-                  <p>A passionate <span id="element"></span>. <span>Let me charm your screen and steal a byte of attention! Welcome to my digital den!</span></p>
-              </div>
-              <div class="rightSection">
-                  <img src="bg.jpg" alt="Profile Image">
-              </div>
-          </section>
-      </main>
-
-      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-      <script>
-          var typed = new Typed('#element', {
-              strings: ['Web Developer', 'AWS DevOps Engineer', 'UX Designer', 'Cloud Engineer'],
-              typeSpeed: 120,
-              loop: true
-          });
-      </script>
-  </body>
-  </html> ---can you rewrite it in better way
-
-  Thought for 5s
-
-Here's a cleaner, more modern rewrite with CSS variables, better responsiveness, and subtle animations:
-
-⏺ Write(/Users/jymitra/Desktop/middleware/cortexaibe-mw/portfolio/index.html)
-
-Wrote 330 lines to /Users/jymitra/Desktop/middleware/cortexaibe-mw/portfolio/index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -158,7 +12,6 @@ Wrote 330 lines to /Users/jymitra/Desktop/middleware/cortexaibe-mw/portfolio/ind
         :root {
             --bg-dark: #1a0220;
             --bg-nav: #280330;
-            --bg-card: #220229;
             --accent: #e03c3c;
             --accent-muted: rgba(221, 61, 61, 0.75);
             --text: #ffffff;
@@ -183,7 +36,6 @@ Wrote 330 lines to /Users/jymitra/Desktop/middleware/cortexaibe-mw/portfolio/ind
             min-height: 100vh;
         }
 
-        /* ── Nav ── */
         nav {
             position: sticky;
             top: 0;
@@ -194,7 +46,6 @@ Wrote 330 lines to /Users/jymitra/Desktop/middleware/cortexaibe-mw/portfolio/ind
             padding: 0 5%;
             height: 72px;
             background-color: var(--bg-nav);
-            backdrop-filter: blur(8px);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
         }
 
@@ -255,7 +106,6 @@ Wrote 330 lines to /Users/jymitra/Desktop/middleware/cortexaibe-mw/portfolio/ind
             width: 100%;
         }
 
-        /* ── Hero ── */
         .hero {
             display: flex;
             justify-content: space-between;
@@ -351,7 +201,6 @@ Wrote 330 lines to /Users/jymitra/Desktop/middleware/cortexaibe-mw/portfolio/ind
             color: var(--accent-muted);
         }
 
-        /* ── Hero Image ── */
         .hero-image {
             flex-shrink: 0;
             width: min(380px, 40vw);
@@ -385,7 +234,6 @@ Wrote 330 lines to /Users/jymitra/Desktop/middleware/cortexaibe-mw/portfolio/ind
             filter: brightness(1);
         }
 
-        /* ── Responsive ── */
         @media (max-width: 768px) {
             nav {
                 padding: 0 6%;
@@ -423,10 +271,9 @@ Wrote 330 lines to /Users/jymitra/Desktop/middleware/cortexaibe-mw/portfolio/ind
     </style>
 </head>
 <body>
-
     <header>
         <nav>
-            <a href="Jyotirmoyee_Mitra_2024.pdf" target="_blank" class="nav-logo">
+            <a href="Jyotirmoyee_Mitra_Resume_.pdf" target="_blank" class="nav-logo">
                 <span class="accent">J</span>yotirmoyee Mitra
             </a>
             <ul>
@@ -442,13 +289,13 @@ Wrote 330 lines to /Users/jymitra/Desktop/middleware/cortexaibe-mw/portfolio/ind
     <main>
         <section id="home" class="hero">
             <div class="hero-text">
-                <p class="greeting">Welcome to my portfolio</p>
+                <p class="greeting">Python Backend & Data Engineer</p>
                 <h1>
                     Hey, I'm
                     <span class="name">Jyotirmoyee.</span>
                 </h1>
-                <p class="role-line">A passionate <span id="typed-role"></span></p>
-                <p class="tagline">Let me charm your screen and steal a byte of attention. Welcome to my digital den.</p>
+                <p class="role-line">Building <span id="typed-role"></span> for scalable systems</p>
+                <p class="tagline">I design and deliver production-grade FastAPI and Flask services, ETL pipelines, Kafka streaming solutions, and AWS-native data platforms for modern business applications.</p>
                 <div class="hero-actions">
                     <a href="project.html" class="btn btn-primary">View Projects</a>
                     <a href="contact.html" class="btn btn-outline">Get in Touch</a>
@@ -466,7 +313,7 @@ Wrote 330 lines to /Users/jymitra/Desktop/middleware/cortexaibe-mw/portfolio/ind
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         new Typed('#typed-role', {
-            strings: ['Web Developer', 'AWS DevOps Engineer', 'UX Designer', 'Cloud Engineer'],
+            strings: ['FastAPI APIs', 'ETL Pipelines', 'Kafka Systems', 'AWS Data Solutions'],
             typeSpeed: 90,
             backSpeed: 50,
             backDelay: 1800,
